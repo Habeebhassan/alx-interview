@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''Minimum Operations Python3'''
 
+
 def minOperations(n):
     '''
     Calculates the minimum number of operations required
@@ -62,4 +63,3 @@ def minOperations(n):
         return operations
     else:
         return 0
-
