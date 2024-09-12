@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """N Queens Puzzle Solver.
 
-This program solves the N Queens puzzle by 
+This program solves the N Queens puzzle by
 placing N non-attacking queens
-on an N×N chessboard. It takes an integer N as 
+on an N×N chessboard. It takes an integer N as
 input and prints all possible
 solutions to the puzzle.
 
@@ -25,18 +25,18 @@ def print_usage_and_exit(message):
 
 
 def is_valid(board, row, col):
-    """Checks if a queen can be placed on board 
+    """Checks if a queen can be placed on board
     at (row, col) without conflicts.
 
     Args:
-        board (list): The current state of the board, 
+        board (list): The current state of the board,
         where board[i] = column
-                      index of the queen placed in the ith row.
+        index of the queen placed in the ith row.
         row (int): The row index to check.
         col (int): The column index to check.
 
     Returns:
-        bool: True if it's safe to place the queen, 
+        bool: True if it's safe to place the queen,
         False otherwise.
     """
     for i in range(row):
