@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """N Queens Puzzle Solver.
 
 This program solves the N Queens puzzle by
