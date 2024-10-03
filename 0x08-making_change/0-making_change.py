@@ -1,35 +1,29 @@
 #!/usr/bin/python3
+
 def makeChange(coins, total):
     """
     Determine fewest coins to 
     meet the total.
+    
     Args:
-    coins (list): Values of coins
-    total (int): Total to meet
+        coins (list): Values of coins.
+        total (int): Total to meet.
+    
     Returns:
-    int: Fewest number of coins
-    or -1 if total can't be met.
+        int: Fewest number of coins
+        or -1 if total can't be met.
     """
     if total <= 0:
         return 0
 
-    # Initialize dp array with 
-    # size total + 1, filled 
-    # with inf to represent 
-    # unreachable totals
+    # Initialize dp array
     dp = [float('inf')] * (total + 1)
-    
-    # To make total 0, we need 0 
-    # coins
-    dp[0] = 0
-    
-    # Compute minimum coins 
-    # needed for each amount
-    for amount in range(1, total + 1):
-        for coin in coins:
-            if coin <= amount:
-                dp[amount] = min(dp[amount], dp[amount - coin] + 1)
+    dp[0] = 0  # Base case
 
-    # If total can't be met, 
-    # return -1, else return dp[total]
+    # Compute minimum coins needed
+    for coin in coins:
+        for amount in range(coin, total + 1):
+            dp[amount] = min(dp[amount], dp[amount - coin] + 1)
+
+    # Return result
     return dp[total] if dp[total] != float('inf') else -1
