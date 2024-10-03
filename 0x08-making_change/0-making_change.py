@@ -2,13 +2,13 @@
 
 def makeChange(coins, total):
     """
-    Determine fewest coins to 
+    Determine fewest coins to
     meet the total.
-    
+
     Args:
         coins (list): Values of coins.
         total (int): Total to meet.
-    
+
     Returns:
         int: Fewest number of coins
         or -1 if total can't be met.
@@ -26,7 +26,7 @@ def makeChange(coins, total):
             if coin <= amount:
                 dp[amount] = min(dp[amount], dp[amount - coin] + 1)
                 # Break if we found a solution for this amount
-                break  
+                break
         amount += 1
 
     # Return result
