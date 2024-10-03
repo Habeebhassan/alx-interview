@@ -20,10 +20,16 @@ def makeChange(coins, total):
     dp = [float('inf')] * (total + 1)
     dp[0] = 0  # Base case
 
-    # Compute minimum coins needed
-    for coin in coins:
-        for amount in range(coin, total + 1):
-            dp[amount] = min(dp[amount], dp[amount - coin] + 1)
+    amount = 1
+    while amount <= total:
+        for coin in coins:
+            if coin <= amount:
+                dp[amount] = min(dp[amount], dp[amount - coin] + 1)
+                # Break if we found a solution for this amount
+                break  
+        amount += 1
 
     # Return result
-    return dp[total] if dp[total] != float('inf') else -1
+    if dp[total] == float('inf'):
+        return -1
+    return dp[total]
