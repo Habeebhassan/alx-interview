@@ -2,12 +2,12 @@
 def island_perimeter(grid):
     """
     Calculates the perimeter of the island in a given grid.
-    
+
     Args:
-        grid (list): A list of lists containing 
-        integers where 0 represents water and 
+        grid (list): A list of lists containing
+        integers where 0 represents water and
         1 represents land.
-    
+
     Returns:
         int: The perimeter of the island.
     """
@@ -18,7 +18,7 @@ def island_perimeter(grid):
     for i in range(rows):
         for j in range(cols):
             if grid[i][j] == 1:
-                # Start with a cell that is land (1), initially adding 4 to the perimeter
+                # Start with a cell that is land (1)
                 perimeter += 4
 
                 # Check for neighboring cells (up, down, left, right)
