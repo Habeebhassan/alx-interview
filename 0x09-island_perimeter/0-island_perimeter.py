@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-module that tranverse 2D Matrix 
-Geometry
+module that tranverse 2D Matrix Geometry
 """
 
 
