@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+module that tranverse 2D Matrix 
+Geometry
+"""
+
+
 def island_perimeter(grid):
     """
     Calculates the perimeter of the island in a given grid.
@@ -28,4 +34,3 @@ def island_perimeter(grid):
                     perimeter -= 2
 
     return perimeter
-
